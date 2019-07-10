@@ -1,10 +1,10 @@
 n= int(input())
-l=[z for z in input().split()]
-l1=[]
-for i in range(len(l)):
-     if l[i] ==str(i):
-       l1.append(l[i])
-if len(l1) == 0:
-  print('-1')
-else:
-   print(' '.join(sorted(l1)))
+l=list(map(int,input().split()))
+m=[]
+for i in l:
+     if l.count(i) ==1:
+       if i not in m:
+          m.append(i)
+for j in m:
+    print(j,end= " ")    
+
